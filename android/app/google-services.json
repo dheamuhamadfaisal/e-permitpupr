@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "56624033367",
+    "project_id": "apsspupr",
+    "storage_bucket": "apsspupr.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56624033367:android:1fc251d0dc8c5ef5a0fd12",
+        "android_client_info": {
+          "package_name": "com.company.pupr_perizinan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56624033367-9tof1qtctt48q3g69r2gapr2q61m5gv0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.company.pupr_perizinan",
+            "certificate_hash": "16d0008369684b05ee69dd5fe973cffc7e337aab"
+          }
+        },
+        {
+          "client_id": "56624033367-2qn7d127oa4qe6vbjtv97497jgl9ag00.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIorGD1jHpDiQxoMgGUmXD2ai60GF6gjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56624033367-2qn7d127oa4qe6vbjtv97497jgl9ag00.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "56624033367-pr9mrk87p9t7cuc805i71f4v99um6qda.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.puprPerizinan"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56624033367:android:4363ca3012109c23a0fd12",
+        "android_client_info": {
+          "package_name": "com.example.pupr_perizinan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56624033367-8pvj32v6fp8nriqugbtd23ovvv3o58jf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pupr_perizinan",
+            "certificate_hash": "16d0008369684b05ee69dd5fe973cffc7e337aab"
+          }
+        },
+        {
+          "client_id": "56624033367-2qn7d127oa4qe6vbjtv97497jgl9ag00.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIorGD1jHpDiQxoMgGUmXD2ai60GF6gjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56624033367-2qn7d127oa4qe6vbjtv97497jgl9ag00.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "56624033367-pr9mrk87p9t7cuc805i71f4v99um6qda.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.puprPerizinan"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

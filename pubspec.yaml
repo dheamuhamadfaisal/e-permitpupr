@@ -1,0 +1,61 @@
+name: pupr_perizinan
+description: "Aplikasi PUPR Perizinan - Sistem Perizinan Tata Ruang Dinas PUPR"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Icons iOS style
+  cupertino_icons: ^1.0.8
+
+  # HTTP client — digunakan untuk semua request ke backend Laravel Sanctum
+  dio: ^5.7.0
+
+  # State management — Provider pattern untuk AuthProvider dan lainnya
+  provider: ^6.1.2
+
+  # Local storage — menyimpan Sanctum Bearer Token secara persisten
+  shared_preferences: ^2.3.3
+
+  # Routing deklaratif — navigasi multi-screen dan role-based routing
+  go_router: ^14.6.2
+
+  # File picker — persiapan upload dokumen berkas permohonan (Form 2)
+  file_picker: ^8.1.7
+
+  # URL launcher — untuk buka/download PDF & WhatsApp chat
+  url_launcher: ^6.3.1
+
+  # Internasionalisasi — format tanggal, angka, mata uang Indonesia
+  intl: ^0.20.2
+  path_provider: ^2.1.6
+  open_filex: ^4.7.0
+  curved_navigation_bar: ^1.0.6
+  image_picker: ^1.2.3
+  image_cropper: ^12.2.1
+  google_sign_in: ^6.2.1
+  firebase_core: 2.32.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.7
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo_apk.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
