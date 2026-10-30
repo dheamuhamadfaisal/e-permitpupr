@@ -131,7 +131,9 @@ class _UploadBeritaScreenState extends State<UploadBeritaScreen> with SingleTick
       konten: isBanner ? 'Banner Item' : _kontenController.text.trim(),
       kategori: isBanner ? 'informasi_terkini' : 'berita',
       imagePath: _pickedImagePath,
-      linkUrl: isBanner ? _linkUrlController.text.trim() : null,
+      linkUrl: isBanner
+          ? (_linkUrlController.text.trim().isEmpty ? null : _linkUrlController.text.trim())
+          : null,
     );
 
     if (!mounted) return;
@@ -282,13 +284,22 @@ class _UploadBeritaScreenState extends State<UploadBeritaScreen> with SingleTick
           TextFormField(
             controller: _linkUrlController,
             decoration: const InputDecoration(
-              labelText: 'Link Tujuan Banner (URL) *',
-              hintText: 'https://...',
+              labelText: 'Link Tujuan Banner (URL) (Opsional)',
+              hintText: 'https://... (opsional)',
               border: OutlineInputBorder(),
               filled: true,
               fillColor: Colors.white,
             ),
-            validator: (val) => val == null || val.trim().isEmpty ? 'Link URL Wajib Diisi' : null,
+            validator: (val) {
+              if (val != null && val.trim().isNotEmpty) {
+                final text = val.trim();
+                final uri = Uri.tryParse(text);
+                if (uri == null || !uri.hasScheme || (uri.scheme != 'http' && uri.scheme != 'https')) {
+                  return 'Format URL tidak valid (contoh: https://...)';
+                }
+              }
+              return null;
+            },
           ),
           const SizedBox(height: 14),
           OutlinedButton.icon(
@@ -616,7 +627,9 @@ class _EditBeritaFormState extends State<_EditBeritaForm> {
       konten: isBanner ? 'Banner Item' : _kontenController.text.trim(),
       kategori: widget.berita.kategori,
       imagePath: _pickedImagePath,
-      linkUrl: isBanner ? _linkUrlController.text.trim() : null,
+      linkUrl: isBanner
+          ? (_linkUrlController.text.trim().isEmpty ? null : _linkUrlController.text.trim())
+          : null,
     );
 
     if (!mounted) return;
@@ -665,8 +678,21 @@ class _EditBeritaFormState extends State<_EditBeritaForm> {
                     if (isBanner) ...[
                       TextFormField(
                         controller: _linkUrlController,
-                        decoration: const InputDecoration(labelText: 'Link Tujuan Banner (URL) *', border: OutlineInputBorder()),
-                        validator: (val) => val == null || val.trim().isEmpty ? 'Link URL Wajib Diisi' : null,
+                        decoration: const InputDecoration(
+                          labelText: 'Link Tujuan Banner (URL) (Opsional)',
+                          hintText: 'https://... (opsional)',
+                          border: OutlineInputBorder(),
+                        ),
+                        validator: (val) {
+                          if (val != null && val.trim().isNotEmpty) {
+                            final text = val.trim();
+                            final uri = Uri.tryParse(text);
+                            if (uri == null || !uri.hasScheme || (uri.scheme != 'http' && uri.scheme != 'https')) {
+                              return 'Format URL tidak valid (contoh: https://...)';
+                            }
+                          }
+                          return null;
+                        },
                       ),
                     ] else ...[
                       TextFormField(
